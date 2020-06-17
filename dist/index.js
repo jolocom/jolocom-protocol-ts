@@ -11,4 +11,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("cred-types-jolocom-core"), exports);
+__exportStar(require("cred-types-jolocom-core/js/types"), exports);
 //# sourceMappingURL=index.js.map
