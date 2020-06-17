@@ -1,9 +1,10 @@
 {
-  "name": "jolocom-protocol-ts",
-  "version": "1.0.0",
+  "name": "@jolocom/protocol-ts",
+  "version": "0.0.1",
   "description": "Jolocom SSI protocol typescript definitions - jolocom.io",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "files": [
+    "dist",
     "lib",
     "index.ts"
   ],
