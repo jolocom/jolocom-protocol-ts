@@ -1,0 +1,31 @@
+import { ClaimInterface } from 'cred-types-jolocom-core'
+import { JsonLdObject } from './linkedData'
+
+type ClaimType = string | number | boolean | {}
+/**
+ * @public
+ */
+export type ClaimEntry = ClaimType | ClaimInterface
+
+/**
+ * @example
+ * ```
+ * {
+ *  id: 'did:jolo:abcdef',
+ *  givenName: 'Example',
+ *  familyName: 'Example'
+ * }
+ * ```
+ *
+ * @param id - The did of the credential subject
+ */
+export interface IClaimSection {
+  id?: string
+  [x: string]: ClaimEntry
+}
+
+export interface ICredentialAttrs extends JsonLdObject {
+  type: string[]
+  name?: string
+  claim: ClaimEntry
+}
