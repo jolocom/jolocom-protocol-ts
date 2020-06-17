@@ -4,7 +4,8 @@
   "description": "Jolocom SSI protocol typescript definitions - jolocom.io",
   "main": "index.ts",
   "files": [
-    "lib", "index.ts"
+    "lib",
+    "index.ts"
   ],
   "scripts": {
     "clean": "rm -rf dist",
@@ -38,6 +39,7 @@
   "license": "MIT",
   "homepage": "https://github.com/jolocom/jolocom-protocol-ts#readme",
   "dependencies": {
+    "cred-types-jolocom-core": "^0.0.11"
   },
   "devDependencies": {
     "@types/node": "^11.9.4",

@@ -478,6 +478,11 @@ cosmiconfig@^5.2.0, cosmiconfig@^5.2.1:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
+cred-types-jolocom-core@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/cred-types-jolocom-core/-/cred-types-jolocom-core-0.0.11.tgz#7cc8c23e511590fede0f9a072854f3892127e0ed"
+  integrity sha512-jnLdSo45XvMhPmecAve41GhYPRUqTIumCyjBa4rpUsTCsLSKR1LHq6XC0C9B0RKyk4S7/DZHjGc9q/WdkjVNCg==
+
 cross-spawn@^6.0.0, cross-spawn@^6.0.5:
   version "6.0.5"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-6.0.5.tgz#4a5ec7c64dfae22c3a14124dbacdee846d80cbc4"
