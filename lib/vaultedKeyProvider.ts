@@ -17,8 +17,9 @@ export interface IVaultedKeyProvider {
   asymDecrypt: (
     data: string,
     derivationArgs: IKeyDerivationArgs,
-  ) => Promise<Buffer>
-}
+  ) => Promise<Buffer>,
+  sealBox(data: Buffer, target: Buffer) => string,
+  unsealBox: (box: string, derivationArgs: IKeyDerivationArgs) => Buffer
 
 export interface IKeyDerivationArgs {
   encryptionPass: string
