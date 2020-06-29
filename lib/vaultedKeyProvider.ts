@@ -5,9 +5,14 @@ export enum KeyTypes {
   ethereumKey = "m/44'/60'/0'/0/0",
 }
 
+export enum SchemeTypes {
+  secp256k1 = "EcdsaSecp256k1",
+  x25519 = "X25519"
+}
+
 export interface IVaultedKeyProvider {
-  getPublicKey: (derivationArgs: IKeyDerivationArgs) => Buffer
-  getPrivateKey: (derivationArgs: IKeyDerivationArgs) => Buffer
+  getPublicKey: (derivationArgs: IKeyDerivationArgs, scheme: SchemeTypes) => Buffer
+  getPrivateKey: (derivationArgs: IKeyDerivationArgs, scheme: SchemeTypes) => Buffer
   sign: (derivationArgs: IKeyDerivationArgs, digest: Buffer) => Buffer
   signDigestable: (
     derivationArgs: IKeyDerivationArgs,
