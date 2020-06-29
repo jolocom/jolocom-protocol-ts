@@ -11,8 +11,8 @@ export enum SchemeTypes {
 }
 
 export interface IVaultedKeyProvider {
-  getPublicKey: (derivationArgs: IKeyDerivationArgs, scheme: SchemeTypes) => Buffer
-  getPrivateKey: (derivationArgs: IKeyDerivationArgs, scheme: SchemeTypes) => Buffer
+  getPublicKey: (derivationArgs: IKeyDerivationArgs, scheme?: SchemeTypes) => Buffer
+  getPrivateKey: (derivationArgs: IKeyDerivationArgs, scheme?: SchemeTypes) => Buffer
   sign: (derivationArgs: IKeyDerivationArgs, digest: Buffer) => Buffer
   signDigestable: (
     derivationArgs: IKeyDerivationArgs,
