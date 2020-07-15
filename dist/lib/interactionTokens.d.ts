@@ -23,6 +23,9 @@ export declare enum InteractionType {
     PaymentRequest = "paymentRequest",
     PaymentResponse = "paymentResponse"
 }
+export interface IInteractionToken {
+    type: InteractionType | string;
+}
 import { TransactionOptions } from './contracts';
 import { ISignedCredentialAttrs } from './signedCredential';
 export interface IPaymentRequestAttrs {
