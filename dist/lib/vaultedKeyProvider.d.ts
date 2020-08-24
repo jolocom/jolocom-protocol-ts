@@ -1,16 +1,16 @@
 /// <reference types="node" />
 import { IDigestable } from './linkedDataSignature';
-export declare enum KeyTypes {
+export declare enum KeyPaths {
     jolocomIdentityKey = "m/73'/0'/0'/0",
     ethereumKey = "m/44'/60'/0'/0/0"
 }
-export declare enum SchemeTypes {
+export declare enum KeyTypes {
     secp256k1 = "EcdsaSecp256k1",
     x25519 = "X25519"
 }
 export interface IVaultedKeyProvider {
-    getPublicKey: (derivationArgs: IKeyDerivationArgs, scheme?: SchemeTypes) => Buffer;
-    getPrivateKey: (derivationArgs: IKeyDerivationArgs, scheme?: SchemeTypes) => Buffer;
+    getPublicKey: (derivationArgs: IKeyDerivationArgs, scheme?: KeyTypes) => Buffer;
+    getPrivateKey: (derivationArgs: IKeyDerivationArgs, scheme?: KeyTypes) => Buffer;
     sign: (derivationArgs: IKeyDerivationArgs, digest: Buffer) => Buffer;
     signDigestable: (derivationArgs: IKeyDerivationArgs, toSign: IDigestable) => Promise<Buffer>;
     asymEncrypt: (data: Buffer, pubKey: Buffer) => Promise<string>;

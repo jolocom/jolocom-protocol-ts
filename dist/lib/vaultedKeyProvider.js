@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SchemeTypes = exports.KeyTypes = void 0;
+exports.KeyTypes = exports.KeyPaths = void 0;
+var KeyPaths;
+(function (KeyPaths) {
+    KeyPaths["jolocomIdentityKey"] = "m/73'/0'/0'/0";
+    KeyPaths["ethereumKey"] = "m/44'/60'/0'/0/0";
+})(KeyPaths = exports.KeyPaths || (exports.KeyPaths = {}));
 var KeyTypes;
 (function (KeyTypes) {
-    KeyTypes["jolocomIdentityKey"] = "m/73'/0'/0'/0";
-    KeyTypes["ethereumKey"] = "m/44'/60'/0'/0/0";
+    KeyTypes["secp256k1"] = "EcdsaSecp256k1";
+    KeyTypes["x25519"] = "X25519";
 })(KeyTypes = exports.KeyTypes || (exports.KeyTypes = {}));
-var SchemeTypes;
-(function (SchemeTypes) {
-    SchemeTypes["secp256k1"] = "EcdsaSecp256k1";
-    SchemeTypes["x25519"] = "X25519";
-})(SchemeTypes = exports.SchemeTypes || (exports.SchemeTypes = {}));
 //# sourceMappingURL=vaultedKeyProvider.js.map
