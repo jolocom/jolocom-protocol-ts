@@ -10,9 +10,11 @@ export interface ILinkedDataSignature extends IDigestable, ISerializable {
   nonce: string
   created: Date
 }
+
 export interface IDigestable {
   signature: string
   digest: () => Promise<Buffer>
+  asBytes: () => Promise<Buffer>
   signer: {
     did: string
     keyId: string

@@ -16,7 +16,7 @@ export interface IContractsAdapter {
     requestToken: ITransactionEncodable,
     from: string,
     nonce: number,
-    vault: IVaultedKeyProvider,
+    vault: any,
     pass: string,
   ) => string
 }
