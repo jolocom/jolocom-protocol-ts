@@ -11,4 +11,86 @@ export interface ICredentialAttrs extends JsonLdObject {
     name?: string;
     claim: ClaimEntry;
 }
+export interface CredentialOfferInputRequest {
+    [key: string]: string | null;
+}
+export declare enum CredentialRenderTypes {
+    document = "document",
+    permission = "permission",
+    claim = "claim"
+}
+export interface CredentialOfferRenderInfo {
+    renderAs?: CredentialRenderTypes;
+    background?: {
+        color?: string;
+        url?: string;
+    };
+    logo?: {
+        url: string;
+    };
+    text?: {
+        color: string;
+    };
+}
+export interface CredentialOfferMetadata {
+    asynchronous?: boolean;
+}
+export interface CredentialOffer1 {
+    type: string;
+    requestedInput?: CredentialOfferInputRequest;
+    renderInfo?: CredentialOfferRenderInfo;
+    metadata?: CredentialOfferMetadata;
+}
+export interface CredentialOffer2 {
+    type: string;
+    locale?: string;
+    issuer?: IssuerManifest;
+    credential?: CredentialDefinition;
+}
+export interface CredentialOffer extends CredentialOffer2, CredentialOffer1 {
+}
+export interface IssuerManifest {
+    id: string;
+    name?: string;
+    styles?: {
+        thumbnail?: CredentialDefinitionImage;
+        hero?: CredentialDefinitionImage;
+        background?: {
+            color?: string;
+        };
+        text?: {
+            color?: string;
+        };
+    };
+}
+export interface CredentialDefinition {
+    schema: string;
+    name?: string;
+    description?: string;
+    display?: {
+        title?: CredentialManifestDisplayMapping;
+        subtitle?: CredentialManifestDisplayMapping;
+        description?: CredentialManifestDisplayMapping;
+        properties?: CredentialManifestDisplayMapping[];
+    };
+    styles?: {
+        thumbnail?: CredentialDefinitionImage;
+        hero?: CredentialDefinitionImage;
+        background?: {
+            color?: string;
+        };
+        text?: {
+            color?: string;
+        };
+    };
+}
+export interface CredentialManifestDisplayMapping {
+    path?: string[];
+    text?: string;
+    label?: string;
+}
+export interface CredentialDefinitionImage {
+    uri: string;
+    alt: string;
+}
 export {};

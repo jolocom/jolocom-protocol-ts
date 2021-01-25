@@ -12,4 +12,14 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("cred-types-jolocom-core"), exports);
 __exportStar(require("cred-types-jolocom-core/js/types"), exports);
+__exportStar(require("cred-types-jolocom-core"), exports);
+__exportStar(require("cred-types-jolocom-core/js/types"), exports);
+__exportStar(require("./lib/contracts"), exports);
+__exportStar(require("./lib/credential"), exports);
+__exportStar(require("./lib/didDocument"), exports);
+__exportStar(require("./lib/interactionTokens"), exports);
+__exportStar(require("./lib/linkedData"), exports);
+__exportStar(require("./lib/linkedDataSignature"), exports);
+__exportStar(require("./lib/signedCredential"), exports);
+__exportStar(require("./lib/vaultedKeyProvider"), exports);
 //# sourceMappingURL=index.js.map

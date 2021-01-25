@@ -86,7 +86,7 @@ export interface CredentialOffer2 {
 }
 
 /**
- * This interface extends both verysion for backwards compatibility
+ * This interface extends both versions for backwards compatibility
  */
 export interface CredentialOffer extends CredentialOffer2, CredentialOffer1 { }
 
