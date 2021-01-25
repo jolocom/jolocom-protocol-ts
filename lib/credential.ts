@@ -1,6 +1,5 @@
 import { ClaimInterface } from 'cred-types-jolocom-core'
 import { JsonLdObject } from './linkedData'
-import { CredentialOfferInputRequest, CredentialOfferRenderInfo, CredentialOfferMetadata } from "./interactionTokens"
 
 type ClaimType = string | number | boolean | {}
 /**
@@ -30,6 +29,35 @@ export interface ICredentialAttrs extends JsonLdObject {
   name?: string
   claim: ClaimEntry
 }
+
+export interface CredentialOfferInputRequest {
+  [key: string]: string | null
+}
+
+export enum CredentialRenderTypes {
+  document = 'document',
+  permission = 'permission',
+  claim = 'claim',
+}
+
+export interface CredentialOfferRenderInfo {
+  renderAs?: CredentialRenderTypes
+  background?: {
+    color?: string // Hex value
+    url?: string // URL to base64 encoded background image
+  }
+  logo?: {
+    url: string // URL to base64 encoded image
+  }
+  text?: {
+    color: string // Hex value
+  }
+}
+
+export interface CredentialOfferMetadata {
+  asynchronous?: boolean
+}
+
 
 /**
  * This is here for backwards compatibility

@@ -45,36 +45,8 @@ export interface IPaymentResponseAttrs {
   txHash: string
 }
 
-export enum CredentialRenderTypes {
-  document = 'document',
-  permission = 'permission',
-  claim = 'claim',
-}
-
-export interface CredentialOfferInputRequest {
-  [key: string]: string | null
-}
-
-export interface CredentialOfferRenderInfo {
-  renderAs?: CredentialRenderTypes
-  background?: {
-    color?: string // Hex value
-    url?: string // URL to base64 encoded background image
-  }
-  logo?: {
-    url: string // URL to base64 encoded image
-  }
-  text?: {
-    color: string // Hex value
-  }
-}
-
-export interface CredentialOfferMetadata {
-  asynchronous?: boolean
-}
-
 // TODO @next this is here for backwards compatibility
-export { CredentialOffer } from './credential'
+export { CredentialOffer, CredentialOfferInputRequest, CredentialOfferRenderInfo, CredentialOfferMetadata } from "./credential"
 
 export interface CredentialOfferRequestAttrs {
   callbackURL: string
