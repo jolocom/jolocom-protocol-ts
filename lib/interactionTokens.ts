@@ -33,6 +33,7 @@ export interface IInteractionToken {
 
 import { TransactionOptions } from './contracts'
 import { ISignedCredentialAttrs } from './signedCredential'
+import { CredentialOffer } from './credential'
 
 export interface IPaymentRequestAttrs {
   callbackURL: string
@@ -72,12 +73,8 @@ export interface CredentialOfferMetadata {
   asynchronous?: boolean
 }
 
-export interface CredentialOffer {
-  type: string
-  requestedInput?: CredentialOfferInputRequest
-  renderInfo?: CredentialOfferRenderInfo
-  metadata?: CredentialOfferMetadata
-}
+// TODO @next this is here for backwards compatibility
+export { CredentialOffer } from './credential'
 
 export interface CredentialOfferRequestAttrs {
   callbackURL: string
