@@ -1,4 +1,3 @@
-import { IVaultedKeyProvider } from './vaultedKeyProvider';
 interface ContractsGatewayInfo {
     name: string;
     chainId: number;
@@ -9,7 +8,7 @@ interface AddressInfo {
     balance: number;
 }
 export interface IContractsAdapter {
-    assembleTxFromInteractionToken: (requestToken: ITransactionEncodable, from: string, nonce: number, vault: IVaultedKeyProvider, pass: string) => string;
+    assembleTxFromInteractionToken: (requestToken: ITransactionEncodable, from: string, nonce: number, vault: any, pass: string) => string;
 }
 export interface IContractsGateway {
     getNetworkInfo: () => ContractsGatewayInfo | {};

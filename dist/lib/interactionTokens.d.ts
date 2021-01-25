@@ -28,6 +28,7 @@ export interface IInteractionToken {
 }
 import { TransactionOptions } from './contracts';
 import { ISignedCredentialAttrs } from './signedCredential';
+import { CredentialOffer } from './credential';
 export interface IPaymentRequestAttrs {
     callbackURL: string;
     description: string;
@@ -36,36 +37,7 @@ export interface IPaymentRequestAttrs {
 export interface IPaymentResponseAttrs {
     txHash: string;
 }
-export declare enum CredentialRenderTypes {
-    document = "document",
-    permission = "permission",
-    claim = "claim"
-}
-export interface CredentialOfferInputRequest {
-    [key: string]: string | null;
-}
-export interface CredentialOfferRenderInfo {
-    renderAs?: CredentialRenderTypes;
-    background?: {
-        color?: string;
-        url?: string;
-    };
-    logo?: {
-        url: string;
-    };
-    text?: {
-        color: string;
-    };
-}
-export interface CredentialOfferMetadata {
-    asynchronous?: boolean;
-}
-export interface CredentialOffer {
-    type: string;
-    requestedInput?: CredentialOfferInputRequest;
-    renderInfo?: CredentialOfferRenderInfo;
-    metadata?: CredentialOfferMetadata;
-}
+export { CredentialOffer, CredentialOfferInputRequest, CredentialOfferRenderInfo, CredentialOfferMetadata } from "./credential";
 export interface CredentialOfferRequestAttrs {
     callbackURL: string;
     offeredCredentials: CredentialOffer[];
@@ -114,4 +86,3 @@ export interface IExposedConstraintFunctions {
     greater: ComparableConstraintFunc;
     smaller: ComparableConstraintFunc;
 }
-export {};
