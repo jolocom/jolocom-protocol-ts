@@ -33,6 +33,7 @@ export interface IInteractionToken {
 
 import { TransactionOptions } from './contracts'
 import { ISignedCredentialAttrs } from './signedCredential'
+import { CredentialOffer } from './credential'
 
 export interface IPaymentRequestAttrs {
   callbackURL: string
@@ -44,40 +45,8 @@ export interface IPaymentResponseAttrs {
   txHash: string
 }
 
-export enum CredentialRenderTypes {
-  document = 'document',
-  permission = 'permission',
-  claim = 'claim',
-}
-
-export interface CredentialOfferInputRequest {
-  [key: string]: string | null
-}
-
-export interface CredentialOfferRenderInfo {
-  renderAs?: CredentialRenderTypes
-  background?: {
-    color?: string // Hex value
-    url?: string // URL to base64 encoded background image
-  }
-  logo?: {
-    url: string // URL to base64 encoded image
-  }
-  text?: {
-    color: string // Hex value
-  }
-}
-
-export interface CredentialOfferMetadata {
-  asynchronous?: boolean
-}
-
-export interface CredentialOffer {
-  type: string
-  requestedInput?: CredentialOfferInputRequest
-  renderInfo?: CredentialOfferRenderInfo
-  metadata?: CredentialOfferMetadata
-}
+// TODO @next this is here for backwards compatibility
+export { CredentialOffer, CredentialOfferInputRequest, CredentialOfferRenderInfo, CredentialOfferMetadata } from "./credential"
 
 export interface CredentialOfferRequestAttrs {
   callbackURL: string
