@@ -1,0 +1,63 @@
+{
+  "name": "@jolocom/protocol-ts",
+  "version": "0.5.6-rc1",
+  "description": "Jolocom SSI protocol typescript definitions - jolocom.io",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "index.ts"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prepublish": "yarn clean; yarn build",
+    "build": "tsc -p .",
+    "build:watch": "tsc -w -p .",
+    "format": "eslint --fix --ext .ts .",
+    "generate-api-docs": "typedoc ./ts"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jolocom/jolocom-protocol-ts.git"
+  },
+  "keywords": [
+    "Jolocom",
+    "Self-Sovereign Identity",
+    "SSI",
+    "jolocom-sdk",
+    "typescript"
+  ],
+  "author": "Jolocom Dev <dev@jolocom.io>",
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/jolocom/jolocom-protocol-ts/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/jolocom/jolocom-protocol-ts#readme",
+  "dependencies": {
+    "cred-types-jolocom-core": "^0.0.11"
+  },
+  "devDependencies": {
+    "@types/node": "^11.9.4",
+    "@typescript-eslint/eslint-plugin": "^1.5.0",
+    "@typescript-eslint/parser": "^1.5.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "3.0.2",
+    "eslint": "^5.16.0",
+    "husky": "^3.0.5",
+    "source-map-support": "^0.5.10",
+    "ts-node": "^8.0.2",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.6.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
