@@ -7,6 +7,8 @@ var InteractionType;
     InteractionType["CredentialResponse"] = "credentialResponse";
     InteractionType["CredentialsReceive"] = "credentialsReceive";
     InteractionType["Authentication"] = "authentication";
+    InteractionType["AuthorizationRequest"] = "AuthorizationRequest";
+    InteractionType["AuthorizationResponse"] = "AuthorizationResponse";
     InteractionType["CredentialOfferRequest"] = "credentialOfferRequest";
     InteractionType["CredentialOfferResponse"] = "credentialOfferResponse";
     InteractionType["PaymentRequest"] = "paymentRequest";
