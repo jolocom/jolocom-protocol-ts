@@ -88,7 +88,7 @@ export interface CredentialOffer2 {
 /**
  * This interface extends both versions for backwards compatibility
  */
-export interface CredentialOffer extends CredentialOffer2, CredentialOffer1 { }
+export interface CredentialOffer extends CredentialOffer2 { }
 
 export interface IssuerManifest {
   id: string
@@ -119,7 +119,8 @@ export interface CredentialDefinition {
     thumbnail?: CredentialDefinitionImage
     hero?: CredentialDefinitionImage
     background?: {
-      color?: string
+      color?: string,
+      image_url?: CredentialDefinitionImage
     }
     text?: {
       color?: string
@@ -128,13 +129,17 @@ export interface CredentialDefinition {
   }
 }
 
-// TODO
-// interface PresentationDefinition { }
+enum ClaimMimeType {
+  text_plain = "text/plain",
+  image_png = "image/png",
+}
 
 export interface CredentialManifestDisplayMapping {
   path?: string[]
   text?: string
   label?: string
+  preview?: boolean,
+  mime_type: ClaimMimeType,
 }
 
 export interface CredentialDefinitionImage {
