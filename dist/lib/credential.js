@@ -7,4 +7,9 @@ var CredentialRenderTypes;
     CredentialRenderTypes["permission"] = "permission";
     CredentialRenderTypes["claim"] = "claim";
 })(CredentialRenderTypes = exports.CredentialRenderTypes || (exports.CredentialRenderTypes = {}));
+var ClaimMimeType;
+(function (ClaimMimeType) {
+    ClaimMimeType["text_plain"] = "text/plain";
+    ClaimMimeType["image_png"] = "image/png";
+})(ClaimMimeType || (ClaimMimeType = {}));
 //# sourceMappingURL=credential.js.map

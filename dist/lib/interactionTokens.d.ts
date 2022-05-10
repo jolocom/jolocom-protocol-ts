@@ -18,6 +18,8 @@ export declare enum InteractionType {
     CredentialResponse = "credentialResponse",
     CredentialsReceive = "credentialsReceive",
     Authentication = "authentication",
+    AuthorizationRequest = "AuthorizationRequest",
+    AuthorizationResponse = "AuthorizationResponse",
     CredentialOfferRequest = "credentialOfferRequest",
     CredentialOfferResponse = "credentialOfferResponse",
     PaymentRequest = "paymentRequest",
@@ -70,6 +72,12 @@ export interface ICredentialRequest {
 export interface IAuthenticationAttrs {
     callbackURL: string;
     description: string;
+}
+export interface IAuthorizationAttrs {
+    callbackURL: string;
+    description: string;
+    action?: string;
+    imageURL?: string;
 }
 export declare type Operator = '==' | '!=' | '<' | '>';
 export interface IConstraint {
