@@ -129,7 +129,7 @@ export interface CredentialDefinition {
   }
 }
 
-enum ClaimMimeType {
+export enum ClaimMimeType {
   text_plain = "text/plain",
   image_png = "image/png",
 }

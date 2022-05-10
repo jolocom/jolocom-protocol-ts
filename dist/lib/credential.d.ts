@@ -85,7 +85,7 @@ export interface CredentialDefinition {
         };
     };
 }
-declare enum ClaimMimeType {
+export declare enum ClaimMimeType {
     text_plain = "text/plain",
     image_png = "image/png"
 }
