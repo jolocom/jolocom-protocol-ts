@@ -1,6 +1,6 @@
 {
   "name": "@jolocom/protocol-ts",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Jolocom SSI protocol typescript definitions - jolocom.io",
   "main": "dist/index.js",
   "files": [
