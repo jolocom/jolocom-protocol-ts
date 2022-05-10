@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CredentialRenderTypes = void 0;
+exports.ClaimMimeType = exports.CredentialRenderTypes = void 0;
 var CredentialRenderTypes;
 (function (CredentialRenderTypes) {
     CredentialRenderTypes["document"] = "document";
@@ -11,5 +11,5 @@ var ClaimMimeType;
 (function (ClaimMimeType) {
     ClaimMimeType["text_plain"] = "text/plain";
     ClaimMimeType["image_png"] = "image/png";
-})(ClaimMimeType || (ClaimMimeType = {}));
+})(ClaimMimeType = exports.ClaimMimeType || (exports.ClaimMimeType = {}));
 //# sourceMappingURL=credential.js.map
