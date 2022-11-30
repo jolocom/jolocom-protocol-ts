@@ -9,7 +9,7 @@ export interface IClaimSection {
 export interface ICredentialAttrs extends JsonLdObject {
     type: string[];
     name?: string;
-    claim: ClaimEntry;
+    credentialSubject: ClaimEntry;
 }
 export interface CredentialOfferInputRequest {
     [key: string]: string | null;

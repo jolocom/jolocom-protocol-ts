@@ -4,13 +4,13 @@ import { SignedJsonLdObject } from './linkedData';
 export interface ISignedCredentialAttrs extends SignedJsonLdObject, ICredentialAttrs {
     id: string;
     issuer: string;
-    issued: string;
+    issuanceDate: string;
     expires?: string;
-    claim: IClaimSection;
+    credentialSubject: IClaimSection;
 }
 export interface ISignedCredCreationArgs<T extends BaseMetadata> {
     metadata: T;
-    claim: T['claimInterface'];
+    credentialSubject: T['claimInterface'];
     subject: string;
 }
 export interface IKeyMetadata {
